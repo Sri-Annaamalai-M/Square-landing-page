@@ -208,10 +208,10 @@ export const postFormApi = async (requestUrl, params) => {
 };
 
 /* GET - View Download API */
-export const view_downloadApi = async (requestUrl, okrSubmissionId, action) => {
+export const view_downloadApi = async (requestUrl, submissionId, action) => {
   try {
     const response = await API.get(
-      `${requestUrl}/${okrSubmissionId}?options=${action}`,
+      `${requestUrl}/${submissionId}?options=${action}`,
       {
         responseType: 'blob',
       }
@@ -279,9 +279,9 @@ export const view_downloadTicketAttachment = async (
 };
 
 /* GET - DownloadFile API */
-export const downloadFileApi = async (okrSubmissionId, action) => {
+export const downloadFileApi = async (submissionId, action) => {
   try {
-    const response = await API.get(`${okrSubmissionId}?options=${action}`, {
+    const response = await API.get(`${submissionId}?options=${action}`, {
       responseType: 'arraybuffer',
     });
     return new Blob([response.data], {

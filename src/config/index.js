@@ -12,7 +12,6 @@ const config = {
 };
 
 export const environment = "local";
-// https://okr-automation-dev.s3.ap-south-1.amazonaws.com/documents/kanimozhi_1721034525135.pdf
 
 const hostConfig = {
   WEB_URL: config[environment].url,
