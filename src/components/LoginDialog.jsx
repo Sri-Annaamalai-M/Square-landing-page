@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Input from "./Input";
 import Button from "./Button";
+import { createUser } from "../api/Service/create"; 
+
 
 const LoginModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({ email: "", password: "" });
