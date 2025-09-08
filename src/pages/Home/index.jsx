@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Button from '../../components/ui/Button';
 import Lock from './Lock';
+import { InteractiveGridPattern } from '../../components/ui/Intractive-Grid';
 import { useNavigate as Navigate } from 'react-router-dom';
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -88,14 +89,23 @@ const Home = () => {
         <section className="w-full bg-[linear-gradient(359deg,#ffffff_0%,_#e3ebff_100%)] relative">
             <div 
               className="w-full h-[650px] xs:h-[700px] sm:h-[750px] md:h-[650px] lg:h-[700px] xl:h-[750px] 2xl:h-[802px] bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: "url('/images/HomeHero.png')" }}
             >
-            <div className="w-full max-w-[300px] xs:max-w-[350px] sm:max-w-[400px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1200px] 2xl:max-w-[1300px] mx-auto px-3 xs:px-4 sm:px-5 lg:px-8 h-full">
+              <InteractiveGridPattern
+                className="[mask-image:radial-gradient(1200px_circle_at_center,white,transparent)] opacity-100 pointer-events-auto"
+                width={100}
+                height={100}
+                squares={[24, 24]}
+                squaresClassName="hover:fill-blue-500 transition-colors duration-300"
+              />
+              
+              {/* Gradient Overlay - matches the image gradient */}
+              <div className="absolute inset-0 bg-gradient-to-b from-[#a8c5ff]/60 via-[#c8d9ff]/40 to-[#ffffff]/20 pointer-events-none z-[1]" />
+            <div className="w-full max-w-[300px] xs:max-w-[350px] sm:max-w-[400px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1200px] 2xl:max-w-[1300px] mx-auto px-3 xs:px-4 sm:px-5 lg:px-8 h-full relative z-10">
               
               {/* Mobile Layout (< 768px) - Stacked Vertically */}
-              <div className="md:hidden flex flex-col justify-center h-full gap-5 xs:gap-6 sm:gap-7 text-center py-6">
+              <div className="md:hidden flex flex-col justify-center h-full gap-5 xs:gap-6 sm:gap-7 text-center py-6 relative z-10">
                 {/* Text Content - Increased sizes */}
-                <div className="flex flex-col gap-3 xs:gap-4 w-full px-2">
+                <div className="flex flex-col gap-3 xs:gap-4 w-full px-2 relative z-10">
                   {/* Small Header */}
                   <div className="text-[20px] xs:text-[24px] sm:text-[28px] font-manrope font-[800] text-global-1">
                     Agentic AI Breakthroughs
@@ -145,8 +155,8 @@ const Home = () => {
                 </div>
                 
                 {/* Image Container - Mobile - INCREASED SIZES */}
-                <div className="flex justify-center w-full mt-4">
-                  <div className="relative w-full max-w-[280px] xs:max-w-[320px] sm:max-w-[360px]">
+                <div className="flex justify-center w-full mt-4 relative z-10">
+                  <div className="relative w-full max-w-[280px] xs:max-w-[320px] sm:max-w-[360px] z-10">
                     {/* Main Image Card */}
                     <div className="relative bg-transparent rounded-[32px] overflow-hidden">
                       <AnimatePresence mode="wait">
@@ -189,14 +199,14 @@ const Home = () => {
               </div>
 
               {/* Desktop and Large Tablet Layout (>= 768px) - Side by Side */}
-              <div className="hidden md:grid md:grid-cols-10 items-center h-full gap-8">
+              <div className="hidden md:grid md:grid-cols-10 items-center h-full gap-8 relative z-10">
                 
                 {/* Left Content Container - 60% */}
-                <div className="md:col-span-6 flex flex-col gap-[8px] lg:gap-[12px] justify-center text-center lg:text-left">
+                <div className="md:col-span-6 flex flex-col gap-[8px] lg:gap-[12px] justify-center text-center lg:text-left relative z-10">
                   {/* Small Header */}
-                  <div className="text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px] 2xl:text-[48px] font-manrope font-[800] text-global-1 whitespace-nowrap">
+                  <h2 className="text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px] 2xl:text-[48px] font-manrope font-[800] text-global-1 whitespace-nowrap">
                     Agentic AI Breakthroughs
-                  </div>
+                  </h2>
                   
                   {/* Main Heading with Slide Animation */}
                   <h1 className="text-[20px] md:text-[24px] lg:text-[28px] xl:text-[36px] 2xl:text-[42px] font-manrope font-[600] leading-[24px] md:leading-[28px] lg:leading-[32px] xl:leading-[40px] 2xl:leading-[48px] text-global-1 h-[24px] md:h-[28px] lg:h-[32px] xl:h-[40px] 2xl:h-[48px] overflow-hidden whitespace-nowrap">
@@ -242,8 +252,8 @@ const Home = () => {
                 </div>
                 
                 {/* Right Image Container - 40% Desktop */}
-                <div className="md:col-span-4 flex justify-center lg:justify-end">
-                  <div className="relative w-full max-w-[250px] md:max-w-[300px] lg:max-w-[350px] xl:max-w-[400px] 2xl:max-w-[525px]">
+                <div className="md:col-span-4 flex justify-center lg:justify-end relative z-10">
+                  <div className="relative w-full max-w-[250px] md:max-w-[300px] lg:max-w-[350px] xl:max-w-[400px] 2xl:max-w-[525px] z-10">
                     {/* Main Image Card */}
                     <div className="relative bg-transparent rounded-[32px] overflow-hidden">
                       <AnimatePresence mode="wait">
@@ -298,7 +308,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
           <div className="relative p-4 xs:p-5 sm:p-6 lg:p-12 xl:p-16 overflow-hidden rounded-xl lg:rounded-2xl" style={{ backgroundImage: "url('/images/Bgframe.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
             {/* Feature Cards Grid */}
-            <div className="relative z-10 grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 xs:gap-5 sm:gap-6 lg:gap-8">
+            <div className="relative z-10 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 xs:gap-5 sm:gap-6 lg:gap-8">
               {/* Domain Versatility Card */}
               <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-xl transition-shadow h-auto sm:h-[240px] lg:h-[260px] flex flex-col">
                 <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center">
