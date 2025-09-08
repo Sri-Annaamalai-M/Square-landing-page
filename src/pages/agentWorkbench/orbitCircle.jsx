@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 // import { useNavigate } from 'react-router-dom'; // Currently unused but kept for future use
 import { OrbitingCircles } from '../../components/ui/Orbiting-circles'
 import LoginModal from '../../components/LoginDialog';
+import SignUpModal from '../../components/SignUpDialog';
 
 const OrbitCircle = () => {
     // const navigate = useNavigate(); // Currently unused but kept for future use
-    const [isLoginOpen, setIsLoginOpen] = useState(false);
+    const [isSignUpOpen, setisSignUpOpen] = useState(false);
     // const [index, setIndex] = useState(0); // Currently unused but kept for future use
 
     // Currently unused but kept for future navigation functionality
@@ -314,7 +315,7 @@ const OrbitCircle = () => {
                             showExternalText={true}
                         >
                             {getNonRepeatingItems().map((item, index) => (
-                                <div key={`${activeButton}-${index}`} className="flex flex-col items-center" onClick={() => setIsLoginOpen(true)}>
+                                <div key={`${activeButton}-${index}`} className="flex flex-col items-center" onClick={() => setisSignUpOpen(true)}>
                                     <div className="bg-white rounded-full p-3 shadow-xl mb-2 border-6 border-[#dee0df]">
                                         <img
                                             src={item.icon}
@@ -351,9 +352,9 @@ const OrbitCircle = () => {
                 </div>
             </div>
 
-            <LoginModal
-        isOpen={isLoginOpen}
-        onClose={() => setIsLoginOpen(false)}
+            <SignUpModal
+        isOpen={isSignUpOpen}
+        onClose={() => setisSignUpOpen(false)}
       />
         </div>
     )
