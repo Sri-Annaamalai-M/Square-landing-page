@@ -1,6 +1,6 @@
 import React from "react";
-import Hero from "../components/hero"
-import { Card, CardContent } from "../components/ui/card";
+import Hero from "../../components/common/hero"
+import { Card, CardContent } from "../../components/ui/card";
 const contentSections = [
   {
     id: 1,

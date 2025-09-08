@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Briefcase, BarChart2, Zap, BrainCircuit, ArrowLeft } from 'lucide-react';
-import UseCaseCard from '../../components/UseCaseCard';
+import UseCaseCard from '../../components/common/UseCaseCard';
 
 // Helper component for list items in the main content
 const ListItem = ({ children }) => (

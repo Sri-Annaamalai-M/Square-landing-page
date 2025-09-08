@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import Input from "./Input";
 import Button from "./Button";
-import { createUser } from "../api/Service/create";
+import { createUser } from "../../api/Service/create";
 
 const disposableDomains = [
   "tempmail.com",

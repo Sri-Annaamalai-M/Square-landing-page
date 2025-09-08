@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Button from '../../components/ui/Button';
-import Lock from './Lock';
+import Lock from '../../components/home/Lock';
 import { InteractiveGridPattern } from '../../components/ui/Intractive-Grid';
 import { useNavigate as Navigate } from 'react-router-dom';
 import { motion, AnimatePresence } from "framer-motion";

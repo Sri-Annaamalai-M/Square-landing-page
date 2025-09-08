@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 // import CTASection from "../Home/CTASection";
 import useCaseData from "../../data/usecase.json";
-import UseCaseCard from "../../components/UseCaseCard";
+import UseCaseCard from "../../components/common/UseCaseCard";
 import Button from "../../components/ui/Button";
 
 // Main App component
