@@ -117,10 +117,10 @@ const StickyScrollSection = () => {
       <div className="flex flex-col sm:hidden px-6 min-h-screen justify-center">
         {/* First content block */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6">
+          <h2 className="text-2xl font-manrope font-bold mb-6">
             The Biggest Challenge for Modern Enterprises is Mastering Complexity
           </h2>
-          <p className="text-base text-black/70 mb-6">
+          <p className="text-base font-inter text-black/70 mb-6">
             Businesses today must innovate faster, deliver seamless customer experiences, and scale efficiently while navigating dynamic markets and evolving technologies.
           </p>
         </div>
@@ -141,10 +141,10 @@ const StickyScrollSection = () => {
         
         {/* Second content block */}
         <div>
-          <h2 className="text-2xl font-bold mb-6">
+          <h2 className="text-2xl font-manrope font-bold mb-6">
             Our Key to Unlock the Future: The Agentic Business Blueprint (ABB)
           </h2>
-          <p className="text-base text-black/70">
+          <p className="text-base font-inter text-black/70">
             The Agentic Business Blueprint (ABB) is our framework to align business goals with adaptive strategies, agentic intelligence, and automation.
           </p>
         </div>

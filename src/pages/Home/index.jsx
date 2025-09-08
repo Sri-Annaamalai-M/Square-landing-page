@@ -294,21 +294,21 @@ const Home = () => {
       </div>
       
       {/* Feature Cards Section */}
-      <div className="relative z-30 px-4 xs:px-5 sm:px-6 lg:px-8 py-8 xs:py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
+      <div className="relative z-30 px-4 xs:px-5 sm:px-6 lg:px-8 py-8 xs:py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 pb-4 xs:pb-5 sm:pb-6 md:pb-8 lg:pb-10 xl:pb-12">
         <div className="max-w-7xl mx-auto">
           <div className="relative p-4 xs:p-5 sm:p-6 lg:p-12 xl:p-16 overflow-hidden rounded-xl lg:rounded-2xl" style={{ backgroundImage: "url('/images/Bgframe.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
             {/* Feature Cards Grid */}
             <div className="relative z-10 grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 xs:gap-5 sm:gap-6 lg:gap-8">
-              {/* Born Agentic Card */}
+              {/* Domain Versatility Card */}
               <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-xl transition-shadow h-auto sm:h-[240px] lg:h-[260px] flex flex-col">
                 <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center">
-                  <img src="/images/Frame.svg" alt="Born Agentic" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8" />
+                  <img src="/images/Frame_3.svg" alt="Domain Versatility" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8" />
                 </div>
                 <h3 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-inter font-medium text-[#040404] mt-3">
-                  Born Agentic
+                  Domain Versatility
                 </h3>
                 <p className="text-xs xs:text-sm sm:text-sm font-manrope font-medium text-gray-600 mt-3 sm:mt-auto mb-3 xs:mb-4 sm:mb-[20px]">
-                  Native to the era of autonomous AI.
+                  Solutions that adapt across industries.
                 </p>
               </div>
               
@@ -325,16 +325,16 @@ const Home = () => {
                 </p>
               </div>
               
-              {/* Domain Versatility Card */}
+              {/* Born Agentic Card */}
               <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-xl transition-shadow h-auto sm:h-[240px] lg:h-[260px] flex flex-col">
                 <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center">
-                  <img src="/images/Frame_3.svg" alt="Domain Versatility" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8" />
+                  <img src="/images/Frame.svg" alt="Born Agentic" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8" />
                 </div>
                 <h3 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-inter font-medium text-[#040404] mt-3">
-                  Domain Versatility
+                  Born Agentic
                 </h3>
                 <p className="text-xs xs:text-sm sm:text-sm font-manrope font-medium text-gray-600 mt-3 sm:mt-auto mb-3 xs:mb-4 sm:mb-[20px]">
-                  Solutions that adapt across industries.
+                  Native to the era of autonomous AI.
                 </p>
               </div>
               
@@ -373,7 +373,7 @@ const Home = () => {
       </div>
       
       {/* Use Cases Section */}
-      <div className="py-8 xs:py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 px-4 xs:px-5 sm:px-6 lg:px-8">
+      <div className="pt-4 xs:pt-5 sm:pt-6 md:pt-8 lg:pt-10 xl:pt-12 pb-8 xs:pb-10 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24 px-4 xs:px-5 sm:px-6 lg:px-8">
         <div className="w-full mx-auto">
           {/* Background with decorative elements - full width */}
           <div className="relative bg-gradient-to-br from-blue-50 to-white rounded-xl lg:rounded-2xl overflow-hidden">
@@ -414,11 +414,11 @@ const Home = () => {
                     Seamless, smart, and scalable Agentic AI powers the future of IT.
                   </p>
                   <div 
-                    className="flex items-center text-[#3e57da] hover:text-[#064ee3] cursor-pointer transition-all duration-300 opacity-100 group-hover:opacity-100 group-hover:transform group-hover:translate-x-2"
+                    className="flex items-center text-[#3e57da] hover:text-[#064ee3] cursor-pointer transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 group-hover:translate-x-2"
                     onClick={() => navigate("/usecase?category=information-technology")}
                   >
                     <span className="text-xs xs:text-sm sm:text-sm font-inter">Learn More</span>
-                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2 group-hover:transform group-hover:rotate-45 transition-transform duration-300" />
+                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2 group-hover:transform group-hover:rotate-0 transition-transform duration-300" />
                   </div>
                 </div>
                 
@@ -438,7 +438,7 @@ const Home = () => {
                     onClick={() => navigate("/usecase?category=supply-chain")}
                   >
                     <span className="text-xs xs:text-sm sm:text-sm font-inter">Learn More</span>
-                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2 group-hover:transform group-hover:rotate-45 transition-transform duration-300" />
+                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2 group-hover:transform group-hover:rotate-0 transition-transform duration-300" />
                   </div>
                 </div>
                 
@@ -458,7 +458,7 @@ const Home = () => {
                     onClick={() => navigate("/usecase?category=healthcare")}
                   >
                     <span className="text-xs xs:text-sm sm:text-sm font-inter">Learn More</span>
-                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2 group-hover:transform group-hover:rotate-45 transition-transform duration-300" />
+                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2 group-hover:transform group-hover:rotate-0 transition-transform duration-300" />
                   </div>
                 </div>
                 
@@ -478,7 +478,7 @@ const Home = () => {
                     onClick={() => navigate("/usecase?category=insurance")}
                   >
                     <span className="text-xs xs:text-sm sm:text-sm font-inter">Learn More</span>
-                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2 group-hover:transform group-hover:rotate-45 transition-transform duration-300" />
+                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2 group-hover:transform group-hover:rotate-0 transition-transform duration-300" />
                   </div>
                 </div>
                 
@@ -498,7 +498,7 @@ const Home = () => {
                     onClick={() => navigate("/usecase?category=human-resource")}
                   >
                     <span className="text-xs xs:text-sm sm:text-sm font-inter">Learn More</span>
-                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2 group-hover:transform group-hover:rotate-45 transition-transform duration-300" />
+                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2 group-hover:transform group-hover:rotate-0 transition-transform duration-300" />
                   </div>
                 </div>
                 
@@ -523,7 +523,7 @@ const Home = () => {
       </div>
       
       {/* Solutions Section */}
-      <div className="max-w-[320px] xs:max-w-[375px] sm:max-w-[425px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1200px] mx-auto">
+      <div className="max-w-[320px] xs:max-w-[375px] sm:max-w-[425px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1200px] mx-auto px-4 xs:px-5 sm:px-6 md:px-8 lg:px-8">
           <div className="mb-6 xs:mb-8 sm:mb-12">
             <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-sora font-semibold leading-tight">
               <span className="text-[#064ee3]">Beyond Code. <br /></span>
@@ -531,9 +531,9 @@ const Home = () => {
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 xs:gap-6 sm:gap-8 lg:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-5 xs:gap-6 sm:gap-8 lg:gap-8">
             {/* Main Solution Card */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-3">
               <div className="bg-gradient-to-b from-white via-blue-50/50 to-blue-100 
                   border border-gray-200 rounded-xl lg:rounded-2xl 
                   pt-5 pl-5 xs:pt-6 xs:pl-6 sm:pt-8 sm:pl-8 lg:pt-10 lg:pl-10 xl:pt-12 xl:pl-12 
@@ -544,21 +544,21 @@ const Home = () => {
                     Redefining Solutions in the Agentic Era
                   </h3>
                   <p className="text-xs xs:text-sm sm:text-base lg:text-lg font-inter text-[#242424]/70 leading-relaxed max-w-xl">
-                    We do not build with old playbooks. We engineer with AI-first principles to solve the problems that truly matter.
+                  We don’t rely on outdated methods. We design with AI-driven fundamentals to address the challenges that truly count.
                   </p>
                 </div>
                 <div className="flex justify-end pt-5 xs:pt-6 sm:pt-8">
                   <img 
                     src="/images/image_11.png" 
                     alt="Solutions Illustration" 
-                    className="w-full max-w-[180px] xs:max-w-[200px] sm:max-w-[240px] lg:max-w-[280px] h-auto object-cover rounded-lg lg:rounded-xl"
+                    className="w-full max-w-[280px] xs:max-w-[320px] sm:max-w-[360px] md:max-w-[400px] lg:max-w-[420px] h-auto object-cover rounded-lg lg:rounded-xl"
                   />
                 </div>
               </div>
             </div>
             
             {/* Feature Cards Column */}
-            <div className="space-y-4 xs:space-y-5 sm:space-y-6 flex flex-col justify-center">
+            <div className="lg:col-span-2 space-y-4 xs:space-y-5 sm:space-y-6 flex flex-col justify-center">
               {/* Innovation at Core */}
               <div className="bg-[#EEF8FF] rounded-xl lg:rounded-2xl p-4 xs:p-5 sm:p-6 lg:p-8 xl:p-10 relative overflow-hidden">
                   {/* Text Section */}
@@ -567,8 +567,7 @@ const Home = () => {
                       Innovation at Core
                     </h4>
                     <p className="text-xs xs:text-sm sm:text-sm lg:text-base font-inter text-[#242424]/70 leading-relaxed">
-                      We constantly evolve, experiment, and push boundaries, bringing you
-                      future-ready solutions that stay ahead of change.
+                    We continuously adapt, explore, and break new ground, delivering forward-thinking solutions that keep you ahead of the curve.
                     </p>
                   </div>
                   {/* Image Section */}
@@ -588,8 +587,8 @@ const Home = () => {
                 <h4 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-manrope font-bold text-[#040404] mb-3 xs:mb-4 sm:mb-4">
                   AI-Only Engineering
                 </h4>
-                <p className="text-xs xs:text-sm sm:text-sm lg:text-base font-inter text-[#242424]/70 leading-relaxed">
-                  We do not build with old playbooks. We engineer with AI-first principles to solve the problems that truly matter.
+                <p className="text-xs xs:text-sm sm:text-sm lg:text-base pr-4 font-inter text-[#242424]/70 leading-relaxed">
+                We steer clear of traditional approaches. We craft with AI-first principles to tackle the issues that genuinely matter.
                 </p>
               </div>
             </div>

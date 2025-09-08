@@ -1,13 +1,38 @@
-import React, { useState } from 'react'
-// import { useNavigate } from 'react-router-dom'; // Currently unused but kept for future use
+import React, { useState, useEffect } from 'react'
+import { useLocation, useParams } from 'react-router-dom';
 import { OrbitingCircles } from '../../components/ui/Orbiting-circles'
 import LoginModal from '../../components/LoginDialog';
 import SignUpModal from '../../components/SignUpDialog';
 
 const OrbitCircle = () => {
-    // const navigate = useNavigate(); // Currently unused but kept for future use
+    const location = useLocation();
+    const { category } = useParams();
     const [isSignUpOpen, setisSignUpOpen] = useState(false);
-    // const [index, setIndex] = useState(0); // Currently unused but kept for future use
+    const [activeButton, setActiveButton] = useState('Foundation Agents');
+
+    // Effect to handle URL parameters and set active button
+    useEffect(() => {
+        if (category === 'foundation-agents') {
+            setActiveButton('Foundation Agents');
+        } else if (category === 'industry-specific-agents') {
+            setActiveButton('Industry Solutions');
+        } else if (location.pathname.includes('agent-workbench')) {
+            // Default to Foundation Agents if on agent-workbench route without specific category
+            setActiveButton('Foundation Agents');
+        }
+        
+        // Check URL search params for specific content type
+        const searchParams = new URLSearchParams(location.search);
+        const contentType = searchParams.get('type');
+        
+        if (contentType === 'foundation') {
+            setActiveButton('Foundation Agents');
+        } else if (contentType === 'industry') {
+            setActiveButton('Industry Solutions');
+        } else if (contentType === 'customer') {
+            setActiveButton('Customer Solutions');
+        }
+    }, [category, location]);
 
     // Currently unused but kept for future navigation functionality
     // const phrases = [
@@ -245,10 +270,6 @@ const OrbitCircle = () => {
         const currentContent = getCurrentAgentContent();
         return currentContent.items; // Return original items without any repetition
     };
-
-
-    const [activeButton, setActiveButton] = useState('Foundation Agents');
-
 
     const getCurrentAgentContent = () => {
         return agentContent[activeButton] || agentContent['Foundation Agents'];

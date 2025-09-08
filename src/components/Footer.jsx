@@ -27,8 +27,33 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold text-blue-400 mb-4">Agent workbench</h3>
           <ul className="space-y-2 text-gray-300 text-sm">
-            <li>Foundational models</li>
-            <li>Industry specific models</li>
+            <li>
+              <Link 
+                to="/agent-workbench/foundation-agents" 
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                className="hover:text-blue-400 transition-colors"
+              >
+                Foundation agents
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/agent-workbench/industry-specific-agents" 
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                className="hover:text-blue-400 transition-colors"
+              >
+                Industry solutions
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/agent-workbench?type=customer" 
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                className="hover:text-blue-400 transition-colors"
+              >
+                Customer solutions
+              </Link>
+            </li>
           </ul> 
         </div>
 
