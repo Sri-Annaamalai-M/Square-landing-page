@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Building2 } from "lucide-react";
-import { useCategoryContext } from "./components/Sidebar.jsx"; // Import the context hook
+import { useCategoryContext } from "../../components/common/Sidebar.jsx"; // Import the context hook
 import { useNavigate, useParams } from "react-router-dom";
 import agentsData from "../../../public/data/agentsData.js"
 

@@ -1,7 +1,7 @@
 import React, { useState, createContext, useContext } from "react";
 import { Outlet, useNavigate, useParams } from "react-router-dom";
 import { ChevronDown, ChevronUp, Search, Building2 } from "lucide-react";
-import agentsData from "../../../../public/data/agentsData";
+import agentsData from "../../../public/data/agentsData";
 
 // Custom scrollbar styles
 const scrollbarStyles = `
