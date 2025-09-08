@@ -66,26 +66,41 @@ CardContent.displayName = "CardContent";
 
 const UseCaseCard = ({ useCase, onLearnMore }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   
   const toggleExpanded = () => {
     setIsExpanded(!isExpanded);
   };
 
   return (
-    <Card className="flex flex-col w-full max-w-[480px] mx-auto items-start p-4 md:p-5 bg-white rounded-3xl overflow-hidden shadow-[0px_2px_16px_#10182814] border-0">
+    <Card 
+      className={`flex flex-col w-full max-w-[480px] mx-auto items-start p-4 md:p-5 bg-white rounded-3xl overflow-hidden border-0 transition-all duration-300 ease-out cursor-pointer group ${
+        isHovered 
+          ? 'shadow-[0px_20px_40px_rgba(16,24,40,0.25)] transform -translate-y-2 scale-[1.02] ring-2 ring-blue-200 ring-opacity-50' 
+          : 'shadow-[0px_2px_16px_#10182814] hover:shadow-[0px_12px_32px_rgba(16,24,40,0.15)]'
+      }`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <CardContent className="flex flex-col items-start gap-6 w-full p-0">
         {useCase.image ? (
           <div
-            className="w-full h-[150px] md:h-[197px] bg-[#e6edfc] rounded-3xl bg-cover bg-center"
+            className={`w-full h-[150px] md:h-[197px] bg-[#e6edfc] rounded-3xl bg-cover bg-center transition-all duration-300 ${
+              isHovered ? 'transform scale-105' : ''
+            }`}
             style={{ backgroundImage: `url(${useCase.image})` }}
           />
         ) : (
-          <div className="w-full h-[150px] md:h-[197px] bg-[#e6edfc] rounded-3xl" />
+          <div className={`w-full h-[150px] md:h-[197px] bg-[#e6edfc] rounded-3xl transition-all duration-300 ${
+            isHovered ? 'transform scale-105' : ''
+          }`} />
         )}
 
         <div className="flex flex-col w-full items-start gap-4 md:gap-[18px]">
           <div className="flex flex-col items-start gap-3 w-full">
-            <div className="font-sora font-semibold text-black text-[22px] tracking-0 leading-normal">
+            <div className={`font-sora font-semibold text-black text-[22px] tracking-0 leading-normal transition-colors duration-300 ${
+              isHovered ? 'text-[#064EE3]' : ''
+            }`}>
               {useCase.title}
             </div>
 
@@ -107,9 +122,11 @@ const UseCaseCard = ({ useCase, onLearnMore }) => {
           <Button
             variant="link"
             onClick={() => onLearnMore(useCase.id)}
-            className="font-inter font-normal text-[#3e57da] text-base md:text-[22px] tracking-0 leading-normal p-0 h-auto justify-start"
+            className={`font-inter font-normal text-base md:text-[22px] tracking-0 leading-normal p-0 h-auto justify-start transition-all duration-300 ${
+              isHovered ? 'text-[#064EE3] transform translate-x-2' : 'text-[#3e57da]'
+            }`}
           >
-            Learn More
+            Learn More →
           </Button>
         </div>
       </CardContent>

@@ -75,6 +75,9 @@ export const UseCase = () => {
     if (categoryParam && dataMapping[categoryParam]) {
       setActiveCategory(categoryParam);
     }
+    
+    // Scroll to top when component mounts or category changes
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [location.search]);
 
   // Extract category filters dynamically from the data mapping

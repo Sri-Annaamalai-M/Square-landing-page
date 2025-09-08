@@ -38,7 +38,7 @@ export default function Footer() {
           <ul className="space-y-2 text-gray-300 text-sm">
             <li>
               <Link 
-                to="/usecase" 
+                to="/usecase?category=supply-chain" 
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
                 Supply Chain
@@ -46,10 +46,34 @@ export default function Footer() {
             </li>
             <li>
               <Link 
-                to="/usecase" 
+                to="/usecase?category=information-technology" 
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
                 IT Solution
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/usecase?category=healthcare" 
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              >
+                Healthcare
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/usecase?category=insurance" 
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              >
+                Insurance
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/usecase?category=human-resource" 
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              >
+                Human Resource
               </Link>
             </li>
           </ul>

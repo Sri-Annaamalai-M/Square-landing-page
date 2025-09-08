@@ -77,7 +77,7 @@ const Home = () => {
   return (
     <div className="w-full bg-white min-h-screen">
       {/* Hero Section - Increased mobile sizes */}
-      <div className="relative w-full h-auto min-h-[500px] xs:min-h-[550px] sm:min-h-[600px] md:min-h-[650px] lg:min-h-[700px] xl:min-h-[750px] 2xl:min-h-[800px] overflow-hidden pt-20 xs:pt-22 sm:pt-24 md:pt-8 lg:pt-2 xl:pt-3 2xl:pt-4">
+      <div className="relative w-full h-auto min-h-[650px] xs:min-h-[700px] sm:min-h-[750px] md:min-h-[650px] lg:min-h-[700px] xl:min-h-[750px] 2xl:min-h-[800px] overflow-hidden pt-20 xs:pt-22 sm:pt-24 md:pt-8 lg:pt-2 xl:pt-3 2xl:pt-4">
         {/* Background Pattern */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
@@ -87,7 +87,7 @@ const Home = () => {
         {/* Hero Content */}
         <section className="w-full bg-[linear-gradient(359deg,#ffffff_0%,_#e3ebff_100%)] relative">
             <div 
-              className="w-full h-[500px] xs:h-[550px] sm:h-[600px] md:h-[650px] lg:h-[700px] xl:h-[750px] 2xl:h-[802px] bg-cover bg-center bg-no-repeat"
+              className="w-full h-[650px] xs:h-[700px] sm:h-[750px] md:h-[650px] lg:h-[700px] xl:h-[750px] 2xl:h-[802px] bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: "url('/images/HomeHero.png')" }}
             >
             <div className="w-full max-w-[300px] xs:max-w-[350px] sm:max-w-[400px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1200px] 2xl:max-w-[1300px] mx-auto px-3 xs:px-4 sm:px-5 lg:px-8 h-full">
@@ -146,7 +146,7 @@ const Home = () => {
                 
                 {/* Image Container - Mobile - INCREASED SIZES */}
                 <div className="flex justify-center w-full mt-4">
-                  <div className="relative w-full max-w-[160px] xs:max-w-[190px] sm:max-w-[220px]">
+                  <div className="relative w-full max-w-[280px] xs:max-w-[320px] sm:max-w-[360px]">
                     {/* Main Image Card */}
                     <div className="relative bg-transparent rounded-[32px] overflow-hidden">
                       <AnimatePresence mode="wait">
@@ -154,7 +154,7 @@ const Home = () => {
                           key={images[index]}
                           src={images[index]} 
                           alt="Hero related visual"
-                          className="w-full h-[160px] xs:h-[190px] sm:h-[220px] object-cover"
+                          className="w-full h-[280px] xs:h-[320px] sm:h-[360px] object-cover"
                           initial={{ x: "100%" }}
                           animate={{ x: "0%" }}
                           exit={{ x: "-100%" }}
@@ -403,102 +403,102 @@ const Home = () => {
               {/* Use Cases Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-5 sm:gap-6 lg:gap-8 mb-6 xs:mb-8 sm:mb-12 lg:mb-16">
                 {/* IT Development Lifecycle Card */}
-                <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-xl transition-all duration-300 relative group">
-                  <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 xs:mb-4 sm:mb-4">
-                    <img src="/images/img_background_blue_800.svg" alt="IT Development" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8" />
+                <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-2xl hover:shadow-blue-100 transition-all duration-300 relative group cursor-pointer transform hover:-translate-y-3 hover:scale-[1.02] hover:ring-2 hover:ring-blue-200 hover:ring-opacity-50">
+                  <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 xs:mb-4 sm:mb-4 group-hover:bg-blue-200 transition-colors duration-300">
+                    <img src="/images/img_background_blue_800.svg" alt="IT Development" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8 group-hover:scale-110 transition-transform duration-300" />
                   </div>
-                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-sora font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3">
+                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-sora font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3 group-hover:text-[#064EE3] transition-colors duration-300">
                     IT Development Lifecycle
                   </h3>
                   <p className="text-xs xs:text-sm sm:text-[16px] font-inter text-black/80 mb-3 xs:mb-4 sm:mb-4">
                     Seamless, smart, and scalable Agentic AI powers the future of IT.
                   </p>
                   <div 
-                    className="flex items-center text-[#3e57da] hover:text-[#064ee3] cursor-pointer transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0"
+                    className="flex items-center text-[#3e57da] hover:text-[#064ee3] cursor-pointer transition-all duration-300 opacity-100 group-hover:opacity-100 group-hover:transform group-hover:translate-x-2"
                     onClick={() => navigate("/usecase?category=information-technology")}
                   >
                     <span className="text-xs xs:text-sm sm:text-sm font-inter">Learn More</span>
-                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2" />
+                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2 group-hover:transform group-hover:rotate-45 transition-transform duration-300" />
                   </div>
                 </div>
                 
                 {/* Supply Chain Card */}
-                <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-xl transition-all duration-300 relative group">
-                  <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 xs:mb-4 sm:mb-4">
-                    <img src="/images/img_frame.svg" alt="Supply Chain" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8" />
+                <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-2xl hover:shadow-blue-100 transition-all duration-300 relative group cursor-pointer transform hover:-translate-y-3 hover:scale-[1.02] hover:ring-2 hover:ring-blue-200 hover:ring-opacity-50">
+                  <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 xs:mb-4 sm:mb-4 group-hover:bg-blue-200 transition-colors duration-300">
+                    <img src="/images/img_frame.svg" alt="Supply Chain" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8 group-hover:scale-110 transition-transform duration-300" />
                   </div>
-                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-sora font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3">
+                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-sora font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3 group-hover:text-[#064EE3] transition-colors duration-300">
                     Supply Chain
                   </h3>
                   <p className="text-xs xs:text-sm sm:text-[16px] font-inter text-black/80 mb-3 xs:mb-4 sm:mb-4">
                     From demand to delivery, every link learns, decides, and acts in real time
                   </p>
                   <div 
-                    className="flex items-center text-[#3e57da] hover:text-[#064ee3] cursor-pointer transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0"
+                    className="flex items-center text-[#3e57da] hover:text-[#064ee3] cursor-pointer transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 group-hover:translate-x-2"
                     onClick={() => navigate("/usecase?category=supply-chain")}
                   >
                     <span className="text-xs xs:text-sm sm:text-sm font-inter">Learn More</span>
-                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2" />
+                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2 group-hover:transform group-hover:rotate-45 transition-transform duration-300" />
                   </div>
                 </div>
                 
                 {/* Healthcare Card */}
-                <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-xl transition-all duration-300 relative group">
-                  <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 xs:mb-4 sm:mb-4">
-                    <img src="/images/img_frame_blue_800.svg" alt="Healthcare" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8" />
+                <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-2xl hover:shadow-blue-100 transition-all duration-300 relative group cursor-pointer transform hover:-translate-y-3 hover:scale-[1.02] hover:ring-2 hover:ring-blue-200 hover:ring-opacity-50">
+                  <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 xs:mb-4 sm:mb-4 group-hover:bg-blue-200 transition-colors duration-300">
+                    <img src="/images/img_frame_blue_800.svg" alt="Healthcare" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8 group-hover:scale-110 transition-transform duration-300" />
                   </div>
-                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-sora font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3">
+                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-sora font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3 group-hover:text-[#064EE3] transition-colors duration-300">
                     Healthcare
                   </h3>
                   <p className="text-xs xs:text-sm sm:text-[16px] font-inter text-black/80 mb-3 xs:mb-4 sm:mb-4">
                     Partnering with hospitals to provide intelligent, personalized, and always-available healthcare solutions.
                   </p>
                   <div 
-                    className="flex items-center text-[#3e57da] hover:text-[#064ee3] cursor-pointer transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0"
+                    className="flex items-center text-[#3e57da] hover:text-[#064ee3] cursor-pointer transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 group-hover:translate-x-2"
                     onClick={() => navigate("/usecase?category=healthcare")}
                   >
                     <span className="text-xs xs:text-sm sm:text-sm font-inter">Learn More</span>
-                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2" />
+                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2 group-hover:transform group-hover:rotate-45 transition-transform duration-300" />
                   </div>
                 </div>
                 
                 {/* Insurance Card */}
-                <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-xl transition-all duration-300 relative group">
-                  <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 xs:mb-4 sm:mb-4">
-                    <img src="/images/img_frame_blue_800_60x60.svg" alt="Insurance" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8" />
+                <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-2xl hover:shadow-blue-100 transition-all duration-300 relative group cursor-pointer transform hover:-translate-y-3 hover:scale-[1.02] hover:ring-2 hover:ring-blue-200 hover:ring-opacity-50">
+                  <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 xs:mb-4 sm:mb-4 group-hover:bg-blue-200 transition-colors duration-300">
+                    <img src="/images/img_frame_blue_800_60x60.svg" alt="Insurance" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8 group-hover:scale-110 transition-transform duration-300" />
                   </div>
-                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-sora font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3">
+                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-sora font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3 group-hover:text-[#064EE3] transition-colors duration-300">
                     Insurance
                   </h3>
                   <p className="text-xs xs:text-sm sm:text-[16px] font-inter text-black/80 mb-3 xs:mb-4 sm:mb-4">
                     40% faster bookings, predictive demand management, and personalised guest experiences.
                   </p>
                   <div 
-                    className="flex items-center text-[#3e57da] hover:text-[#064ee3] cursor-pointer transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0"
+                    className="flex items-center text-[#3e57da] hover:text-[#064ee3] cursor-pointer transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 group-hover:translate-x-2"
                     onClick={() => navigate("/usecase?category=insurance")}
                   >
                     <span className="text-xs xs:text-sm sm:text-sm font-inter">Learn More</span>
-                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2" />
+                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2 group-hover:transform group-hover:rotate-45 transition-transform duration-300" />
                   </div>
                 </div>
                 
                 {/* Human Resource Card */}
-                <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-xl transition-all duration-300 relative group">
-                  <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 xs:mb-4 sm:mb-4">
-                    <img src="/images/img_frame_60x60.svg" alt="Human Resource" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8" />
+                <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg p-4 xs:p-5 sm:p-6 hover:shadow-2xl hover:shadow-blue-100 transition-all duration-300 relative group cursor-pointer transform hover:-translate-y-3 hover:scale-[1.02] hover:ring-2 hover:ring-blue-200 hover:ring-opacity-50">
+                  <div className="bg-[#e6edfc] rounded-lg lg:rounded-xl p-3 xs:p-4 sm:p-4 w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-3 xs:mb-4 sm:mb-4 group-hover:bg-blue-200 transition-colors duration-300">
+                    <img src="/images/img_frame_60x60.svg" alt="Human Resource" className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8 group-hover:scale-110 transition-transform duration-300" />
                   </div>
-                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-sora font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3">
+                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl font-sora font-semibold text-[#242424] mb-2 xs:mb-3 sm:mb-3 group-hover:text-[#064EE3] transition-colors duration-300">
                     Human Resource
                   </h3>
                   <p className="text-xs xs:text-sm sm:text-[16px] font-inter text-black/80 mb-3 xs:mb-4 sm:mb-4">
                     3× higher conversions using recommendation engines and customer intelligence.
                   </p>
                   <div 
-                    className="flex items-center text-[#3e57da] hover:text-[#064ee3] cursor-pointer transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0"
+                    className="flex items-center text-[#3e57da] hover:text-[#064ee3] cursor-pointer transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 group-hover:translate-x-2"
                     onClick={() => navigate("/usecase?category=human-resource")}
                   >
                     <span className="text-xs xs:text-sm sm:text-sm font-inter">Learn More</span>
-                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2" />
+                    <img src="/images/img_solar_arrow_up_linear.svg" alt="Arrow" className="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 ml-2 group-hover:transform group-hover:rotate-45 transition-transform duration-300" />
                   </div>
                 </div>
                 
