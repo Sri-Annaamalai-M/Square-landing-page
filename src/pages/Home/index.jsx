@@ -78,7 +78,7 @@ const Home = () => {
   return (
     <div className="w-full bg-white min-h-screen">
       {/* Hero Section - Increased mobile sizes */}
-      <div className="relative w-full h-auto min-h-[650px] xs:min-h-[700px] sm:min-h-[750px] md:min-h-[650px] lg:min-h-[700px] xl:min-h-[750px] 2xl:min-h-[800px] overflow-hidden pt-20 xs:pt-22 sm:pt-24 md:pt-8 lg:pt-2 xl:pt-3 2xl:pt-4">
+      <div className="relative w-full h-auto min-h-[750px] xs:min-h-[800px] sm:min-h-[850px] md:min-h-[650px] lg:min-h-[700px] xl:min-h-[750px] 2xl:min-h-[800px] overflow-hidden pt-20 xs:pt-22 sm:pt-24 md:pt-8 lg:pt-2 xl:pt-3 2xl:pt-4">
         {/* Background Pattern */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
@@ -88,7 +88,7 @@ const Home = () => {
         {/* Hero Content */}
         <section className="w-full bg-[linear-gradient(359deg,#ffffff_0%,_#e3ebff_100%)] relative">
             <div 
-              className="w-full h-[650px] xs:h-[700px] sm:h-[750px] md:h-[650px] lg:h-[700px] xl:h-[750px] 2xl:h-[802px] bg-cover bg-center bg-no-repeat"
+              className="w-full h-[750px] xs:h-[800px] sm:h-[850px] md:h-[650px] lg:h-[700px] xl:h-[750px] 2xl:h-[802px] bg-cover bg-center bg-no-repeat"
             >
               <InteractiveGridPattern
                 className="[mask-image:radial-gradient(1200px_circle_at_center,white,transparent)] opacity-100 pointer-events-auto"
@@ -100,19 +100,19 @@ const Home = () => {
               
               {/* Gradient Overlay - matches the image gradient */}
               <div className="absolute inset-0 bg-gradient-to-b from-[#a8c5ff]/60 via-[#c8d9ff]/40 to-[#ffffff]/20 pointer-events-none z-[1]" />
-            <div className="w-full max-w-[300px] xs:max-w-[350px] sm:max-w-[400px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1200px] 2xl:max-w-[1300px] mx-auto px-3 xs:px-4 sm:px-5 lg:px-8 h-full relative z-10">
+            <div className="w-full max-w-[300px] xs:max-w-[350px] sm:max-w-[400px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1200px] 2xl:max-w-[1300px] mx-auto px-4 xs:px-5 sm:px-6 lg:px-8 h-full relative z-10">
               
               {/* Mobile Layout (< 768px) - Stacked Vertically */}
               <div className="md:hidden flex flex-col justify-center h-full gap-5 xs:gap-6 sm:gap-7 text-center py-6 relative z-10">
                 {/* Text Content - Increased sizes */}
-                <div className="flex flex-col gap-3 xs:gap-4 w-full px-2 relative z-10">
+                <div className="flex flex-col gap-5 xs:gap-6 sm:gap-7 w-full px-2 xs:px-3 sm:px-4 relative z-10">
                   {/* Small Header */}
-                  <div className="text-[20px] xs:text-[24px] sm:text-[28px] font-manrope font-[800] text-global-1">
+                  <div className="text-[18px] xs:text-[20px] sm:text-[24px] font-manrope font-[800] text-global-1 text-center whitespace-nowrap">
                     Agentic AI Breakthroughs
                   </div>
                   
                   {/* Main Heading with Slide Animation */}
-                  <h1 className="text-[18px] xs:text-[20px] sm:text-[22px] font-manrope font-[600] leading-[22px] xs:leading-[24px] sm:leading-[26px] text-global-1 h-[22px] xs:h-[24px] sm:h-[26px] overflow-hidden">
+                  <h1 className="text-[16px] xs:text-[18px] sm:text-[20px] font-manrope font-[600] leading-[20px] xs:leading-[22px] sm:leading-[24px] text-global-1 h-[20px] xs:h-[22px] sm:h-[24px] overflow-hidden text-center whitespace-nowrap">
                     <AnimatePresence mode="wait">
                       <motion.span
                         key={phrases[index % phrases.length]}
@@ -129,12 +129,12 @@ const Home = () => {
                   </h1>
                   
                   {/* Subtitle */}
-                  <h2 className="text-[20px] xs:text-[24px] sm:text-[28px] font-manrope font-[800] leading-[20px] xs:leading-[24px] sm:leading-[28px] text-global-1">
+                  <h2 className="text-[18px] xs:text-[20px] sm:text-[24px] font-manrope font-[800] leading-[22px] xs:leading-[24px] sm:leading-[28px] text-global-1 text-center whitespace-nowrap">
                     Everything Unfolds Here
                   </h2>
                   
                   {/* Description */}
-                  <p className="text-[10px] xs:text-[11px] sm:text-[12px] font-manrope font-light leading-[12px] xs:leading-[13px] sm:leading-[14px] text-global-1 mt-2 xs:mt-3 whitespace-nowrap">
+                  <p className="text-[12px] xs:text-[14px] sm:text-[16px] font-manrope font-light leading-[16px] xs:leading-[18px] sm:leading-[20px] text-global-1 text-center whitespace-nowrap">
                     Access 1500+ Foundation Models, Ready for you
                   </p>
                   
@@ -142,7 +142,7 @@ const Home = () => {
                 <Button
                   variant="primary"
                   size="medium"
-                  className="rounded-[16px] xs:rounded-[18px] sm:rounded-[20px] px-4 xs:px-5 sm:px-6 py-[10px] xs:py-[12px] sm:py-[14px] text-[11px] xs:text-[12px] sm:text-[13px] font-semibold text-white w-fit mx-auto mt-3 xs:mt-4"
+                  className="rounded-[16px] xs:rounded-[18px] sm:rounded-[20px] px-4 xs:px-5 sm:px-6 py-[12px] xs:py-[14px] sm:py-[16px] text-[12px] xs:text-[13px] sm:text-[14px] font-semibold text-white w-fit mx-auto whitespace-nowrap"
                   onClick={() => {
                     const ctaSection = document.getElementById('cta-section');
                     if (ctaSection) {
@@ -561,7 +561,7 @@ const Home = () => {
                   <img 
                     src="/images/image_11.png" 
                     alt="Solutions Illustration" 
-                    className="w-full max-w-[280px] xs:max-w-[320px] sm:max-w-[360px] md:max-w-[400px] lg:max-w-[420px] h-auto object-cover rounded-lg lg:rounded-xl"
+                    className="w-full max-w-[300px] xs:max-w-[370px] sm:max-w-[360px] md:max-w-[550px] lg:max-w-[600px] h-auto object-cover rounded-lg lg:rounded-xl"
                   />
                 </div>
               </div>
