@@ -24,5 +24,5 @@ const Input = ({ label, name, type = "text", placeholder, value, onChange }) => 
     </div>
   );
 };
-
+ 
 export default Input;
