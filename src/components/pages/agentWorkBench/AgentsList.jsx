@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useParams, useLocation, useNavigate } from 'react-router-dom'
-import agentsData from '../../../public/data/agentsData.js'
+import agentsData from '../../../../public/data/agentsData'
 
 const AgentsList = () => {
   const { category, categoryId, subcategoryId } = useParams()

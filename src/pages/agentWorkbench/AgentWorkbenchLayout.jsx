@@ -1,5 +1,5 @@
 import React from 'react';
-import WorkbenchLayout from '../../components/agentWorkbench/WorkbenchLayout';
+import WorkbenchLayout from '../../components/pages/agentWorkBench/WorkbenchLayout';
 
 const AgentWorkbenchLayout = () => {
   return <WorkbenchLayout />;

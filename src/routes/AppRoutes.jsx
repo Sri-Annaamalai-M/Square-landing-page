@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import UseCase from "../pages/UseCase/UseCase";
 import UseCaseDetail from "../pages/UseCase/useCaseDetail/UseCaseDetail";
-import LifeAtSNSSquare from "../pages/lifeAtSnsSquare/LifeAtSNSSquare";
+import LifeAtSNSSquare from "../pages/lifeAtSnsSquare";
 import HomePage from '../pages/Home';
 import AgentsDetails from "../pages/agentWorkbench/AgentsDetails";
 import CategoriesAgents from "../pages/agentWorkbench/CategoriesAgents";

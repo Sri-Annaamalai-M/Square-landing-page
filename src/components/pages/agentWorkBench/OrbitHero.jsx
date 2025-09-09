@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation, useParams } from 'react-router-dom';
-import { OrbitingCircles } from '../../components/ui/Orbiting-circles'
-import LoginModal from '../../components/common/LoginDialog';
-import SignUpModal from '../../components/common/SignUpDialog';
+import { OrbitingCircles } from '../../common/Orbiting-circles'
+import LoginModal from '../../common/LoginDialog';
+import SignUpModal from '../../common/SignUpDialog';
 
 const OrbitHero = () => {
     const location = useLocation();

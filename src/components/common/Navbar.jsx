@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from "react-router-dom";
-import Button from "../ui/Button";
+import Button from "./Button2.jsx";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);

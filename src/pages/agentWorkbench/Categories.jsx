@@ -1,5 +1,5 @@
 import React from 'react';
-import CategoriesView from '../../components/agentWorkbench/CategoriesView';
+import CategoriesView from '../../components/pages/agentWorkBench/CategoriesView';
 
 const Categories = () => {
   return <CategoriesView />;

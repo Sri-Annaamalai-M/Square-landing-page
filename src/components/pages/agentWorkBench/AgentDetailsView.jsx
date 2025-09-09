@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import agentsData from "../../../public/data/agentsData"; 
-import lockImage from "../../../public/icons/Group.png";
+import agentsData from "../../../../public/data/agentsData"; 
+import lockImage from "../../../../public/icons/Group.png";
 
 const AgentDetailsView = () => {
   const { category, categoryId, subcategoryId, agentId } = useParams();

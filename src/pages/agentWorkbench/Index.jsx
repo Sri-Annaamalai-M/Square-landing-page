@@ -1,7 +1,7 @@
 import React from "react";
 import agentsData from "../../../public/data/agentsData";
 import { useParams,useNavigate } from "react-router-dom";
-import CategoryGrid from "../../components/agentWorkbench/CategoryGrid";
+import CategoryGrid from "../../components/pages/agentWorkBench/CategoryGrid";
 
 export default function CategoryGridoverall() {
 const navigate = useNavigate();

@@ -1,5 +1,5 @@
 import React from 'react';
-import AgentDetailsView from '../../components/agentWorkbench/AgentDetailsView';
+import AgentDetailsView from '../../components/pages/agentWorkBench/AgentDetailsView';
 
 const AgentsDetails = () => {
   return <AgentDetailsView />;
